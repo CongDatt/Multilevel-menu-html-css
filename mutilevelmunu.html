@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Đa cấp</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        body{
+            font-size: 16px;
+            font-family: tahoma;
+        }
+        #menu {
+            width: 650px;
+            height: 40px;
+            background-color: #008080;
+            margin: 50px auto;
+            position: relative;
+        }
+        ul.root > li{
+             float: left;;
+            position: relative;
+        }
+        ul.root > li > a {
+            color: white;
+            padding: 0px 15px 0px 15px;
+            line-height: 40px;  
+            display: block;    
+        }
+        ul.root > li > a:hover{
+            background-color: #008000;
+            transition: linear 0.6s;
+            -moz-animation: ease-in 0.6s;
+            -webkit-animation:  ease-in 0.6s;
+        }
+        ul.submenu {
+            width: 250px;
+            min-width: 150px;
+            background-color: #008000;
+            display: none;
+            position: absolute;
+        }
+        ul.submenu li a {
+            color: white;
+            line-height: 40px;
+            border-bottom:  1px solid #ccc;
+            text-indent: 15px;
+            display: block;
+        }
+        ul.root > li:hover ul.submenu{
+            display: block;
+            transition: linear 0.6s;
+            -moz-animation: ease-out 0.6s;
+            -webkit-animation:  ease-out 0.6s;
+        }
+        ul.submenu #last .sub{
+            width: 250px;
+            min-width: 150px;
+            position: absolute;
+            display: none;
+        }
+        ul.submenu #last{
+            position: relative;
+            /* left: 250px; */
+        }
+        ul.submenu #last:hover ul.sub {
+            display: block;
+            left: 250px;
+            background-color: #008000;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul class="root">
+        <li><a href="#">Home</a>
+            <ul class="submenu">
+                <li><a href="#">item </a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About</a>
+            <ul class="submenu">
+                <li><a href="#">item </a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Products</a>
+            <ul class="submenu">
+                <li><a href="#">item </a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Services</a>
+            <ul class="submenu">
+                <li><a href="#">item </a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a>
+            <ul class="submenu">
+                <li><a href="#">item </a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li id="last"><a href="#">item</a>
+                    <ul class="sub">
+                        <li><a href="#">item </a></li>
+                        <li><a href="#">item</a></li>
+                        <li><a href="#">item</a></li>
+                        <li><a href="#">item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+</body>
+</html>
